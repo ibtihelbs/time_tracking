@@ -40,7 +40,7 @@ main {
   display: flex;
   align-items: center; /* Vertical */
   justify-content: center; /* Horizontal */
- 
+
   color: white;
   gap: 20px;
 
@@ -51,7 +51,7 @@ a {
   text-decoration: none;
   color: var(--Desaturated-blue);
 }
-a:hover{
+a:hover {
   color: white;
 }
 /*Card_1*/
@@ -142,11 +142,11 @@ li {
   content: url(images/icon-ellipsis.svg);
   float: right;
 }
-footer{
+footer {
   background-color: blue;
   position: absolute;
   bottom: 0px;
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;

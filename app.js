@@ -1,9 +1,16 @@
-var url = document.URL;
+/**var url = document.URL;
 if(url.includes('?')== false){
     location.href = "index.html?id=daily&prev=last day"
-}
+}  */
 
 let card=document.querySelector(".card2");
+let time= document.querySelectorAll("li");
+//console.log(time);
+let times = time.forEach((item,keys)=>{
+    item.addEventListener("click",(e)=>{
+        return e.target.innerHTML;
+    })
+})
 
 let fet = {};
 let _html=[];
@@ -34,15 +41,19 @@ function showOj(per) {
         let timeframes=fet[i].timeframes;
         
         let daily=timeframes.daily;
-        console.log(daily);
-        console.log(typeof(daily));
+        //console.log(daily);
+        //console.log(typeof(daily));
         //let weekly=timeframes.weekly;
         let monthly=timeframes.monthly;
         const urlParams = new URLSearchParams(window.location.search);
         
         let pageSize = urlParams.get('id');   
-        let pageSize_2 = urlParams.get('prev');    
-        console.log(pageSize_2);
+        let pageSize_2 = urlParams.get('prev');
+        if(pageSize==null){
+            pageSize ="daily";
+            pageSize_2 ="last day";
+        }
+        //console.log(pageSize,pageSize_2);
         let date=timeframes[pageSize];
 
         let title=show(fet[i],date).title;
@@ -76,11 +87,7 @@ let joe=()=>{
     joe();
 })
 const urlParams = new URLSearchParams(window.location.search);
-typeof(urlParams);
-typeof(urlParams);
-console.log(urlParams);
 const pageSize = urlParams.get('id');
-console.log(pageSize);
 
 /**let feti= JSON.stringify(fet);
 let per= JSON.parse(feti);
