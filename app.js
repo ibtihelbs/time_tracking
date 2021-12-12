@@ -37,7 +37,7 @@ let html_inner=(title,timeframes,time,pageSize_2)=>{
     
     <p>${title}</p>
     <h1>${time}hrs</h1>
-    <p>${pageSize_2}-${timeframes} </p> 
+    <p>${pageSize_2}-${timeframes}hrs</p> 
     
   `
    }
