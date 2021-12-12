@@ -2,16 +2,23 @@
 if(url.includes('?')== false){
     location.href = "index.html?id=daily&prev=last day"
 }  */
-
+/**let times = time.forEach((item,keys)=>{
+    item.addEventListener("click",(e)=>{
+        alert(e.target.innerHTML);
+    })  
+})
+ */
 let card=document.querySelector(".card2");
 let time= document.querySelectorAll("li");
 //console.log(time);
-let times = time.forEach((item,keys)=>{
-    item.addEventListener("click",(e)=>{
-        return e.target.innerHTML;
+let times = "";
+time.forEach((item,keys,times)=>{
+    item.addEventListener("click",(e,times)=>{
+       times=e.target.innerHTML;
+        
     })
 })
-
+console.log(times);
 let fet = {};
 let _html=[];
 let show=(z,date)=>{
