@@ -12,7 +12,7 @@ class Time_tracker {
           <div class="card">
           <p>${data.title}</p>
           <h1>${data.timeframes["daily"].current}hrs</h1>
-          <span class="times">Yesterday</span>-<span class="previous">${data.timeframes["daily"].previous}hrs</span>
+          <span><span class="times">Yesterday</span>-<span class="previous">${data.timeframes["daily"].previous}hrs</span></span>
           </div>
         `
          }
